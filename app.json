@@ -1,0 +1,17 @@
+{
+  "name": "Vilash Varghese",
+  "description": "Personal website for Vilash Varghese",
+  "repository": "https://git.heroku.com/aqueous-chamber-84714.git",
+  "keywords": [
+    "angularjs",
+    "symfony2",
+    "symfony"
+  ],
+  "success_url": "/blog",
+  "scripts": {
+    "postdeploy": "php app/console doctrine:schema:create"
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ]
+}
