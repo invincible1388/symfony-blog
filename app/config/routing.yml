@@ -1,3 +1,11 @@
+villie_category:
+    resource: "@VillieCategoryBundle/Resources/config/routing.yml"
+    prefix:   /
+
+villie_tags:
+    resource: "@VillieTagsBundle/Resources/config/routing.yml"
+    prefix:   /
+
 villie_blog:
     resource: "@VillieBlogBundle/Controller/"
     type:     annotation

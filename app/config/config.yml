@@ -3,6 +3,8 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
     - { resource: "@VillieBlogBundle/Resources/config/services.yml" }
+    - { resource: "@VillieTagsBundle/Resources/config/services.yml" }
+    - { resource: "@VillieCategoryBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration

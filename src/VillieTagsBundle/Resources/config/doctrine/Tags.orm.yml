@@ -1,0 +1,15 @@
+VillieTagsBundle\Entity\Tags:
+    type: entity
+    table: null
+    repositoryClass: VillieTagsBundle\Repository\TagsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: '90'
+    lifecycleCallbacks: {  }

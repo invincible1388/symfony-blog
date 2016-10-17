@@ -1,0 +1,7 @@
+villie_category_category:
+    resource: "@VillieCategoryBundle/Resources/config/routing/category.yml"
+    prefix:   /category
+
+villie_category_homepage:
+    path:     /
+    defaults: { _controller: VillieCategoryBundle:Default:index }

@@ -1,12 +1,12 @@
 <?php
 
-namespace VillieBlogBundle\Form;
+namespace VillieCategoryBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class PostType extends AbstractType
+class CategoryType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,17 +15,9 @@ class PostType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title')
-            ->add('body')
-            ->add('publishedAt', 'datetime')
+            ->add('name')
+            ->add('description')
         ;
-		$builder
-			->add('Category', 'entity', array(
-                'class' => 'VillieCategoryBundle:Category',
-                'property' => 'name',
-                'required' => false,
-                'expanded' => true,
-			));
     }
     
     /**
@@ -34,7 +26,7 @@ class PostType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'VillieBlogBundle\Entity\Post'
+            'data_class' => 'VillieCategoryBundle\Entity\Category'
         ));
     }
 }

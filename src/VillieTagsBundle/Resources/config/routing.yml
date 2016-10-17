@@ -1,0 +1,3 @@
+villie_tags_homepage:
+    path:     /
+    defaults: { _controller: VillieTagsBundle:Default:index }

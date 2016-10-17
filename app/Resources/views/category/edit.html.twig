@@ -1,21 +1,22 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Post edit</h1>
+    <h1>Category edit</h1>
 
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
         <input type="submit" value="Edit" />
     {{ form_end(edit_form) }}
-
-   <p> <ul class="list-unstyled list-inline">
+	<p>
+    <ul class="list-unstyled list-inline">
         <li>
-            <a class="btn btn-default" href="{{ path('post_index') }}"><i class="ion-ios-arrow-thin-left"></i> &nbsp;Back to the list</a>
+            <a class="btn btn-default" href="{{ path('category_index') }}"><i class="ion-ios-arrow-thin-left"></i> &nbsp;Back to the list</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
                 <input class="btn btn-danger" type="submit" value="Delete">
             {{ form_end(delete_form) }}
         </li>
-    </ul></p>
+    </ul>
+	</p>
 {% endblock %}
