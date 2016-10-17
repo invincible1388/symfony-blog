@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Blog</h1>
+<a href="{{ path('post_new') }}">Create a new entry</a>
+{% for post in posts %}
+<article class="post post-{{ post.id }}">
+	<header class="entry-header">
+		<h1 class="entry-title">
+			<a href="{{ path('post_show', { 'id': post.id }) }}">{{ post.title }}</a>
+		</h1>
+		<div class="entry-meta">
+			<span class="post-category"><a href="#">Web Design</a></span>
+			<span class="post-category"><a href="{{ path('post_edit', { 'id': post.id }) }}">Edit</a></span>
+			{% if post.publishedAt %}<span class="post-date"><a href="#"><time class="entry-date" datetime="{{ post.publishedAt|date('Y-m-d H:i:s') }}">{{ post.publishedAt|date('F j, Y, g:i a') }}</time></a></span>{% endif %}
+
+			<span class="post-author"><a href="#"><em>Vilash Varghese</em></a></span>
+
+		</div>
+	</header>
+	<div class="entry-content clearfix">
+		<p>{{ post.body }}</p>
+		<div class="read-more cl-effect-14">
+			<a href="{{ path('post_show', { 'id': post.id }) }}" class="more-link">Continue reading <span class="meta-nav">→</span></a>
+		</div>
+	</div>
+</article>
+{% endfor %}						
+
+{% endblock %}

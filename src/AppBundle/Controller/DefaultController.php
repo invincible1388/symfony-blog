@@ -14,7 +14,38 @@ class DefaultController extends Controller
     public function indexAction(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', array(
+        return $this->render('AppBundle:Default:index.html.twig', array(
+            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+        ));
+    }
+	/**
+     * @Route("/about", name="aboutpage")
+     */
+    public function aboutAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('AppBundle:Default:about.html.twig', array(
+            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+        ));
+    }
+	/**
+     * @Route("/profile", name="profilepage")
+     */
+    public function profileAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('AppBundle:Default:profile.html.twig', array(
+            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+        ));
+    }
+	
+	/**
+     * @Route("/contact", name="contactpage")
+     */
+    public function contactAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('AppBundle:Default:contact.html.twig', array(
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
         ));
     }

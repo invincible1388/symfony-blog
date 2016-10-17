@@ -1,0 +1,4 @@
+villie_blog_post:
+    resource: "@VillieBlogBundle/Resources/config/routing/post.yml"
+    prefix:   /blog
+
