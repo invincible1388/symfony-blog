@@ -10,4 +10,8 @@ namespace VillieBlogBundle\Repository;
  */
 class PostRepository extends \Doctrine\ORM\EntityRepository
 {
+	public function findAll()
+    {
+        return $this->findBy(array(), array('publishedAt' => 'DESC'));
+    }
 }
