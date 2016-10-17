@@ -19,13 +19,13 @@ class PostType extends AbstractType
             ->add('body')
             ->add('publishedAt', 'datetime')
         ;
-		$builder
-			->add('Category', 'entity', array(
-                'class' => 'VillieCategoryBundle:Category',
-                'property' => 'name',
-                'required' => false,
-                'expanded' => true,
-			));
+		// $builder
+			// ->add('Category', 'entity', array(
+                // 'class' => 'VillieCategoryBundle:Category',
+                // 'property' => 'name',
+                // 'required' => false,
+                // 'expanded' => true,
+			// ));
     }
     
     /**
