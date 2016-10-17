@@ -17,4 +17,10 @@ VillieBlogBundle\Entity\Post:
         publishedAt:
             type: datetime
             column: published_at
+    manyToOne:
+        category:
+            targetEntity: Category
+            joinColumn:
+                name: category_id
+                referencedColumnName: id
     lifecycleCallbacks: {  }

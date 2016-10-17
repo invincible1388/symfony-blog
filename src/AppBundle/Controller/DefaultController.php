@@ -49,4 +49,12 @@ class DefaultController extends Controller
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
         ));
     }
+	
+	public function wrongRouteAction($url)
+    {
+        //$user = $this->get('security.context')->getToken()->getUser();
+
+        return $this->render('AppBundle:Default:error404.html.twig', array("url" => $url));
+
+    }
 }
